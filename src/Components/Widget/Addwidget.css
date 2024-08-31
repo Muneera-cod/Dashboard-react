@@ -1,0 +1,28 @@
+
+.rightpart{
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    left: 60%;
+    
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px 10px #5a5a5a;
+ 
+}
+.toppart{
+    width: 98%;
+    height: 6%;
+    background: rgb(50, 11, 87);
+    color: #fff;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.secondpart{
+    width:100%;
+    background: #fff;
+    height: 94%;
+}
