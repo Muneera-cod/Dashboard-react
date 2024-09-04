@@ -49,14 +49,31 @@ function Dashboard() {
                     <div className='boxinleft'>
                  
                           <h4 style={{margin:0}} key={widget.id}>{widget.name}</h4>
-                          <div style={{ width: 120, height: 120 ,position:'relative',top:0}} >
+                          
                               { widget.total ?
-                                     (widget.circular?<><CircularProgressbar  text={widget.total} 
-                                          value={widget.value1}
-                                       styles={buildStyles({textColor: "black", pathColor:widget.pathcolor1 ,trailColor:widget.unfilledcolor
-                                         })}/>
-                                </>:<div style={{position:'absolute',right:0,left:0}}><label>{widget.total}</label><progress></progress></div>):<div style={{position:'absolute',top:'5%',right:'0',left:'150%',bottom:'5%'}}><IconChartBarOff color='lightgray'/><p style={{fontSize:'x-small'}}>No graph data</p></div>}
-                          </div>
+                                     (widget.circular?<><div>
+                                      
+                                      <div style={{ width: 120, height: 100,position:'absolute',zIndex:10}}><CircularProgressbar  text={widget.total} 
+                                      value={widget.value1}
+                                   styles={buildStyles({textColor: "black", pathColor:widget.pathcolor1 ,trailColor:widget.unfilledcolor
+                                     })}/></div>
+                                       
+                                         <div style={{ width: 120, height: 100,position:'relative',top:0,zIndex:9}} ><CircularProgressbar  text={widget.total} 
+                                      value={widget.value2}
+                                   styles={buildStyles({textColor: "black", pathColor:widget.pathcolor2 ,trailColor:widget.unfilledcolor
+                                     })}/></div>
+                                          <div style={{ width: 120, height: 100,position:'relative',top:-100}}><CircularProgressbar  text={widget.total} 
+                                      value={widget.value3}
+                                   styles={buildStyles({textColor: "black", pathColor:widget.pathcolor3 ,trailColor:"lightgray"
+                                     })}>
+                                          </CircularProgressbar></div> 
+                                
+                                          </div></>:<div>
+                                  <label>{widget.total}</label><progress></progress></div>)
+                                  
+                                  :<div>
+                                    <IconChartBarOff color='lightgray'/><p style={{fontSize:'x-small'}}>No graph data</p></div>}
+                          
                    </div>
                  
                     <div className='boxinright'>

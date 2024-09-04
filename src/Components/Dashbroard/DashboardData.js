@@ -26,6 +26,8 @@ export const data= [
              "unfilledcolor":"#ccddff",
              "pathcolor1":"#4d88ff",
              "value1":50
+             
+
         
             
          
@@ -50,14 +52,14 @@ export const data= [
           
          
 
-            "unfilledcolor":"gray",
+            "unfilledcolor":"transparent",
             "pathcolor1":"green",
             "pathcolor2":"red",
              "pathcolor3":"yellow", 
             "value1":75,
-            "value2":17,
-            "value3":7,
-            "value4":0.3
+            "value2":90,
+            "value3":95,
+            
               
         }
       ]
